@@ -1,0 +1,280 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentals</title>
+  <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fundamentals: Student Budget Genie</h1>
+    <form id="questionnaireForm">
+      <label for="university">Which university do you study at?</label>
+      <input type="text" id="university" placeholder="e.g., NYU" required>
+
+      <label for="background">What do your parents do for work?</label>
+      <input type="text" id="background" placeholder="e.g., Engineer, Teacher" required>
+
+      <label for="spending">Do you know your monthly spending?</label>
+      <select id="spending" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <div id="spendingDetails" style="display: none;">
+        <label for="income">Monthly Income:</label>
+        <input type="number" id="income" placeholder="e.g., 1000">
+
+        <label for="expenses">Monthly Expenses:</label>
+        <input type="number" id="expenses" placeholder="e.g., 800">
+      </div>
+
+      <button type="submit">Generate Budget</button>
+    </form>
+    <div id="budgetOutput" style="display: none;">
+      <h2>Your Budget</h2>
+      <p id="budgetDetails"></p>
+    </div>
+  </div>
+  <script src="public/script.js"></script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentals</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fundamentals: Student Budget Genie</h1>
+    <form id="questionnaireForm">
+      <label for="university">Which university do you study at?</label>
+      <input type="text" id="university" placeholder="e.g., NYU" required>
+
+      <label for="background">What do your parents do for work?</label>
+      <input type="text" id="background" placeholder="e.g., Engineer, Teacher" required>
+
+      <label for="spending">Do you know your monthly spending?</label>
+      <select id="spending" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <div id="spendingDetails" style="display: none;">
+        <label for="income">Monthly Income:</label>
+        <input type="number" id="income" placeholder="e.g., 1000">
+
+        <label for="expenses">Monthly Expenses:</label>
+        <input type="number" id="expenses" placeholder="e.g., 800">
+      </div>
+
+      <button type="submit">Generate Budget</button>
+    </form>
+    <div id="budgetOutput" style="display: none;">
+      <h2>Your Budget</h2>
+      <p id="budgetDetails"></p>
+    </div>
+  </div>
+  <script src="/public/script.js"></script>
+</body>
+</html> --> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentals: Student Budget Genie</title>
+  <link rel="stylesheet" href="/public/style.css">
+  <style>
+    body {
+      background-color: #000000; /* Black background */
+      color: #ffffff; /* White text for contrast */
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #1a1a1a; /* Dark grey container for better contrast */
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px 2px rgba(0, 255, 255, 0.3); /* Subtle blue glow */
+    }
+
+    h1 {
+      color: #00ff00; /* Green color for the title */
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #00ffff; /* Cyan color for labels */
+    }
+
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #00ff00; /* Green border */
+      border-radius: 4px;
+      background-color: #333333; /* Dark input background */
+      color: #ffffff;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00ff00; /* Green button */
+      color: #000000; /* Black text on button */
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00cc00; /* Darker green on hover */
+    }
+
+    #budgetOutput {
+      background-color: #002233; /* Dark blue background for budget output */
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 4px;
+      color: #00ff00; /* Green text for budget output */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fundamentals: Student Budget Genie</h1>
+    <form id="questionnaireForm">
+      <label for="university">Which university do you study at?</label>
+      <input type="text" id="university" placeholder="e.g., NYU" required>
+
+      <label for="yearOfStudy">What year are you in?</label>
+      <input type="text" id="yearOfStudy" placeholder="e.g., Freshman, Sophomore" required>
+
+      <label>Where are you living?</label>
+      <label><input type="radio" name="livingSituation" value="On Campus" required> On Campus</label>
+      <label><input type="radio" name="livingSituation" value="Off Campus"> Off Campus</label>
+      <label><input type="radio" name="livingSituation" value="At Home"> At Home</label>
+
+      <label for="background">What do your parents do for work?</label>
+      <input type="text" id="background" placeholder="e.g., Engineer, Teacher" required>
+
+      <label for="spending">Do you know your monthly spending?</label>
+      <select id="spending" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <div id="spendingDetails" style="display: none;">
+        <label for="income">Monthly Income:</label>
+        <input type="number" id="income" placeholder="e.g., 1000">
+
+        <label for="expenses">Monthly Expenses:</label>
+        <input type="number" id="expenses" placeholder="e.g., 800">
+      </div>
+
+      <label>Are you comfortable managing finances?</label>
+      <label><input type="radio" name="financialKnowledge" value="Yes" required> Yes</label>
+      <label><input type="radio" name="financialKnowledge" value="No"> No</label>
+      <label><input type="radio" name="financialKnowledge" value="Somewhat"> Somewhat</label>
+
+      <label for="lifestylePreferences">What is your preferred lifestyle (e.g., eating out frequently)?</label>
+      <input type="text" id="lifestylePreferences" placeholder="e.g., Moderate spending, Budget-conscious">
+
+      <label for="parentalSupport">How much support do you receive from parents/guardians per month?</label>
+      <input type="text" id="parentalSupport" placeholder="e.g., $500">
+
+      <button type="submit">Generate Budget</button>
+    </form>
+    <div id="budgetOutput" style="display: none;">
+      <h2>Your Budget</h2>
+      <p id="budgetDetails"></p>
+    </div>
+  </div>
+  <script src="/public/script.js"></script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Budget Genie</title>
+  <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fundamentals: Student Budget Genie</h1>
+    <form id="questionnaireForm">
+      <label for="university">Which university do you study at?</label>
+      <input type="text" id="university" placeholder="e.g., NYU" required>
+
+      <label for="yearOfStudy">What year are you in?</label>
+      <input type="text" id="yearOfStudy" placeholder="e.g., Freshman, Sophomore" required>
+
+      <label for="livingSituation">Where are you living?</label>
+      <input type="radio" name="livingSituation" value="On Campus" required> On Campus
+      <input type="radio" name="livingSituation" value="Off Campus" required> Off Campus
+      <input type="radio" name="livingSituation" value="At Home" required> At Home
+
+      <label for="background">What do your parents do for work?</label>
+      <input type="text" id="background" placeholder="e.g., Engineer, Teacher" required>
+
+      <label for="spending">Do you know your monthly spending?</label>
+      <select id="spending" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <div id="spendingDetails" style="display: none;">
+        <label for="income">Monthly Income:</label>
+        <input type="number" id="income" placeholder="e.g., 1000">
+
+        <label for="expenses">Monthly Expenses:</label>
+        <input type="number" id="expenses" placeholder="e.g., 800">
+      </div>
+
+      <label for="financialKnowledge">Are you comfortable managing finances?</label>
+      <input type="radio" name="financialKnowledge" value="Yes" required> Yes
+      <input type="radio" name="financialKnowledge" value="No" required> No
+      <input type="radio" name="financialKnowledge" value="Somewhat" required> Somewhat
+
+      <label for="lifestylePreferences">What is your preferred lifestyle (e.g., eating out frequently)?</label>
+      <input type="text" id="lifestylePreferences" placeholder="e.g., Moderate spending, Budget-conscious" required>
+
+      <label for="parentalSupport">How much support do you receive from parents/guardians per month?</label>
+      <input type="text" id="parentalSupport" placeholder="e.g., $500">
+
+      <button type="submit" id="generateButton">Generate Budget</button>
+    </form>
+    <div id="budgetOutput" style="display: none;">
+      <h2>Your Budget</h2>
+      <p id="budgetDetails"></p>
+    </div>
+  </div>
+  <script src="public/script.js"></script>
+</body>
+</html> -->
